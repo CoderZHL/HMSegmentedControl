@@ -30,6 +30,8 @@
     // Minimum code required to use the segmented control with the default styling.
     HMSegmentedControl *segmentedControl = [[HMSegmentedControl alloc] initWithSectionTitles:@[@"Trending", @"News", @"Library"]];
     segmentedControl.frame = CGRectMake(0, 20, viewWidth, 40);
+    segmentedControl.selectionStyle = HMSegmentedControlSelectionStyleFixedWidth;
+    segmentedControl.selectionIndicatorWidth = 30;
     segmentedControl.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleWidth;
     [segmentedControl addTarget:self action:@selector(segmentedControlChangedValue:) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:segmentedControl];

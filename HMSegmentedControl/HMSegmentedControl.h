@@ -17,7 +17,8 @@ typedef NS_ENUM(NSInteger, HMSegmentedControlSelectionStyle) {
     HMSegmentedControlSelectionStyleTextWidthStripe, // Indicator width will only be as big as the text width
     HMSegmentedControlSelectionStyleFullWidthStripe, // Indicator width will fill the whole segment
     HMSegmentedControlSelectionStyleBox, // A rectangle that covers the whole segment
-    HMSegmentedControlSelectionStyleArrow // An arrow in the middle of the segment pointing up or down depending on `HMSegmentedControlSelectionIndicatorLocation`
+    HMSegmentedControlSelectionStyleArrow, // An arrow in the middle of the segment pointing up or down depending on `HMSegmentedControlSelectionIndicatorLocation`
+    HMSegmentedControlSelectionStyleFixedWidth,
 };
 
 typedef NS_ENUM(NSInteger, HMSegmentedControlSelectionIndicatorLocation) {
@@ -237,6 +238,12 @@ typedef NS_ENUM(NSInteger, HMSegmentedControlImagePosition) {
             right: 0.0f
  */
 @property (nonatomic, readwrite) UIEdgeInsets selectionIndicatorEdgeInsets;
+
+/**
+It effects when HMSegmentedControlSelectionStyle is HMSegmentedControlSelectionStyleFixedWidth.
+ Default is 30.0
+ */
+@property (nonatomic, assign) CGFloat selectionIndicatorWidth;
 
 /**
  Inset left and right edges of segments.
